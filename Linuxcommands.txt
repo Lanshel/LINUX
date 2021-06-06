@@ -1,0 +1,37 @@
+1.Посмотреть где я - pwd
+2.Создать папку - mkdir foldername
+3.Зайти в папку - cd foldername
+4.Создать 3 папки одна в другой mkdir -p test/test-1/test-2
+5.Зайти в любую папку cd "C:\Users\dima\test\test-1\test-2" (путь можно указывать без кавычек, но у меня без кавычек выходит ошибка bash: cd: C:Usersdimatesttest-1test-2: No such file or directory Так же не должно быть? Или если ошибка проставляем кавычки?)
+6.Создать 5 файлов (3 txt, 2 json)  touch file1.txt file2.txt file3.txt  touch Land.json Laand2.json
+7.Создать 3 разные папки mkdir {5,66,88} 
+8.Вывести список содержимого папки ls   ls –l удобно в виде списка с информацией о содержимом.
+9. + Открыть любой txt файл (просто открыть и посмотреть) cat file1.txt
+10.+ написать туда что-нибудь, любой текст. Что бы редактировать текст можно использовать простой редактор nano.  Открыть текст nano file1.txt Написать текст
+11.+ сохранить и выйти. Ctrl+o. Ctrl+x.
+12.Выйти из папки на уровень выше cd ..
+13.Переместить любые 2 файла, которые вы создали, в любую другую папку.
+   mv file1.txt file2.txt "C:\Users\dima\test\test-1\test-2\1"
+14.Скопировать любые 2 файла, которые вы создали, в любую другую папку.
+   cp  file1.txt file2.txt "C:\Users\dima\test\test-1\test-2\1"
+15.Найти файл по имени find .
+16.Просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+17.Вывести несколько первых строк из текстового файла head -2 "C:\Users\dima\test\test-1\test-2\1\file1.txt"
+18.Вывести несколько последних строк из текстового файла tail -n 2 "C:\Users\dima\test\test-1\test-2\1\file1.txt"
+19. просмотреть содержимое длинного файла (команда less) изучите как она работает.
+20. вывести дату и время date '+Дата: %m/%d/%y%nВремя: %H:%M:%S'’
+
+
+Задание *
+1)Отправить http запрос на сервер.  https://api.quarantine.country/api/v1/regions
+curl https://api.quarantine.country/api/v1/regions
+2)	Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+Еху, скрипт написан!
+#!/bin/bash
+mkdir Landysh
+cd Landysh
+mkdir -p test/test-1/test-2
+cd  "C:\Users\dima\test\test-1\test-2\Landysh\test\test-1\test-2"
+touch file1.txt file2.txt file3.txt
+mkdir {5,66,88}
+ls
